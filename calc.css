@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #17121F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    color: #C4B5FD;
+    background-color: #1D1628;
+    border: 1px solid #342943;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: #FFFFFF;
+    background-color: #2A203A;
+    border-color: #A78BFA;
+    transform: translateX(-4px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.15);
+}
+
+.calculator-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    width: 350px;
+    padding: 25px;
+    background: #1D1628;
+    border: 1px solid #38294D;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.calculator-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #A78BFA;
+    margin-bottom: 25px;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    background: #17121F;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    padding: 15px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.buttons button {
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+    background: #30243F;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.buttons button:hover {
+    background: #8B5CF6;
+    transform: scale(1.08);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+.buttons button:nth-child(4n) {
+    background: #5B3A83;
+}
+
+.buttons button.equal {
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 30px;
+    background: #8B5CF6;
+}
+
+.buttons button.equal:hover {
+    background: #A78BFA;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .buttons button {
+        width: 100%;
+        height: 55px;
+    }
+}
